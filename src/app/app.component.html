@@ -1,11 +1,22 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <ion-item class="avatar">
+
+      <ion-grid ion-padding>
+        <ion-row style="background-color: whitesmoke; height: 100px; display:flex; flex-direction: column;">
+            <ion-col style="display: flex;justify-content: center; align-items: flex-end;">
+              <ion-avatar>
+                <img src="https://secure.gravatar.com/avatar/245ebfee46ba6868f48cfc5a2c88c39f">
+              </ion-avatar>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    </ion-item>
+    
+       
+        
       <ion-content>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
