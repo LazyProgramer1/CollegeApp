@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  colleges={"urlToImage":"https://patancollege.edu.np/wp-content/uploads/2018/06/DVS180516-1358.jpg"
+};
 
   constructor() {}
 
