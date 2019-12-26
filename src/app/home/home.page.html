@@ -1,10 +1,98 @@
+<ion-menu side="start">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item class="avatar">
+      <ion-grid ion-padding>
+        <ion-row style="background-color: whitesmoke; height: 100px; display:flex; flex-direction: column;">
+            <ion-col style="display: flex;justify-content: center; align-items: flex-end;">
+              <ion-avatar>
+                <img src="https://secure.gravatar.com/avatar/245ebfee46ba6868f48cfc5a2c88c39f">
+              </ion-avatar>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="chatbubbles" slot="start"></ion-icon>
+        <ion-label>Messages</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="settings" slot="start"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Dashboard
+    <ion-title> Discover Colleges
     </ion-title>
   </ion-toolbar>
+  <ion-searchbar animated showCancelButton="focus" class="searchbar"></ion-searchbar>
 </ion-header>
+<ion-content>
+  <!-- CREATE THE BASIC CARD TO DISPLAY THE SINGLE ARTICLE INCLUDING IMAGE-->
+  <ion-header>
+    <ion-title class="collegeone">Colleges for+2</ion-title>
+  </ion-header>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-img src="assets/img/nist.jpg"> </ion-img>
+            <ion-card-title class ="textCollege">Nist College</ion-card-title>
+         
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-header>
+    <ion-title class="collegeone">Colleges for Bachelors</ion-title>
+  </ion-header>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-img src="assets/img/pcps.jpg"> </ion-img>
+            <ion-card-title class ="textCollege">Patan College</ion-card-title>
+         
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-header>
+    <ion-title class="collegeone">Colleges for Masters</ion-title>
+  </ion-header>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-img src="assets/img/tu.jpg"> </ion-img>
+            <ion-card-title class ="textCollege">Tribhuwan University</ion-card-title>
+         
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+    
+
+</ion-content>
+
