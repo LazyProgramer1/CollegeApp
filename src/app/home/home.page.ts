@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class HomePage {
   colleges={"urlToImage":"https://patancollege.edu.np/wp-content/uploads/2018/06/DVS180516-1358.jpg"
 };
+articles:Array<any> = [
+this.colleges,
+]
 
   constructor() {}
 
