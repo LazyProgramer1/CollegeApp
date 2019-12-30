@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: 'about-college',
     loadChildren: () => import('./collegedetail/about-college/about-college.module').then(m => m.AboutCollegePageModule)
+  },  {
+    path: 'colleges',
+    loadChildren: () => import('./colleges/colleges.module').then( m => m.CollegesPageModule)
   }
+
 
  
 
