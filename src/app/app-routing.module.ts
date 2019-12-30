@@ -23,7 +23,29 @@ const routes: Routes = [
   {
     path: 'about-college',
     loadChildren: () => import('./collegedetail/about-college/about-college.module').then(m => m.AboutCollegePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./home/home.module').then(m =>m.HomePageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./login/login.module').then(m =>m.LoginPageModule)
   }
+
+
 
  
 
