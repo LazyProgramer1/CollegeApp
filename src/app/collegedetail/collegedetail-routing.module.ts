@@ -11,7 +11,28 @@ const routes: Routes = [
   {
     path: 'about-college',
     loadChildren: () => import('./about-college/about-college.module').then( m => m.AboutCollegePageModule)
-  }
+  },  {
+    path: 'courses',
+    loadChildren: () => import('./courses/courses.module').then( m => m.CoursesPageModule)
+  },
+  {
+    path: 'college-galary',
+    loadChildren: () => import('./college-galary/college-galary.module').then( m => m.CollegeGalaryPageModule)
+  },
+  {
+    path: 'facilities',
+    loadChildren: () => import('./facilities/facilities.module').then( m => m.FacilitiesPageModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./contacts/contacts.module').then( m => m.ContactsPageModule)
+  },
+  {
+    path: 'reviews',
+    loadChildren: () => import('./reviews/reviews.module').then( m => m.ReviewsPageModule)
+  },
+
+  
 ];
 
 @NgModule({
