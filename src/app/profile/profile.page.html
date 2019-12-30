@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+ <ion-item id="con">
+    <img class="ava" src="https://secure.gravatar.com/avatar/245ebfee46ba6868f48cfc5a2c88c39f">
+    <ion-icon id = "icon" name="add-circle"></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="friends">
+        <ion-label>My Profile</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="enemies">
+        <ion-label>Academics</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-item>
+</ion-content>
