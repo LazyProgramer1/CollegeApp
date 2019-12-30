@@ -1,0 +1,33 @@
+page-login {
+    ion-content {
+        text-align: center;
+    }
+
+button{
+    -webkit-box-shadow : 0 10px 30px 0 rgba(96,186,233,0.4);
+    box-shadow: 0 10px 30px rgba(96,186,233,0.4);
+    margin : 0px;
+}
+
+.login{
+    margin-top: 500px;
+    text-align: center;
+    border:none;
+    padding: 15px 80px;
+    font-size: 130px;
+    width: 85%;
+    height: 35px;
+    color: #000;
+}
+
+.signup{
+    margin-top: 500px;
+    text-align: center;
+    border:none;
+    padding: 15px 80px;
+    font-size: 130px;
+    width: 85%;
+    height: 35px;
+    color: #000;
+}
+}
