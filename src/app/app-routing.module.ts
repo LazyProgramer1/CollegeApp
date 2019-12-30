@@ -41,6 +41,7 @@ const routes: Routes = [
     path:'reviews',
     loadChildren: () => import('./collegedetail/reviews/reviews.module').then(m=>m.ReviewsPageModule)
   },
+  {
 
     path: 'setting',
     loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
