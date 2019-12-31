@@ -13,30 +13,26 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Profile',
-      url: '/profile',
+      url: '/profiles',
       icon: 'person'
     },
     {
       title: 'Setting',
-      url: '/setting',
+      url: '/settings',
       icon: 'Settings'
     },
     {
       title: 'Bookmark',
-      url: '/bookmark',
+      url: '/bookmarks',
       icon: 'bookmarks'
     },
     {
       title: 'About Us',
-      url: '/aboutus',
+      url: '/about',
       icon: 'people'
     }
-
-   
- 
-   
-   
   ];
+
 
   constructor(
     private platform: Platform,
