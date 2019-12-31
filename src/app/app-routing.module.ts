@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
+    path: 'profiles',
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule)
+  },
+  {
     path: 'collegedetail',
     loadChildren: () => import('./collegedetail/collegedetail.module').then(m => m.CollegedetailPageModule)
   },
@@ -43,13 +47,15 @@ const routes: Routes = [
   },
   {
 
-    path: 'setting',
+    path: 'settings',
     loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
   },
   {
-    path: 'aboutus',
+
+    path: 'about',
     loadChildren: () => import('./aboutus/aboutus.module').then( m => m.AboutusPageModule)
   },
+
   {
     path: 'bookmarks',
     loadChildren: () => import('./bookmarks/bookmarks.module').then( m => m.BookmarksPageModule)
@@ -65,7 +71,8 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./login/login.module').then(m =>m.LoginPageModule)
-  }
+  },
+  
 
 
 ];
