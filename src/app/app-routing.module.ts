@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CollegedetailPageModule } from './collegedetail/collegedetail.module';
@@ -85,7 +86,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule {}
 
-
-
-
- 
