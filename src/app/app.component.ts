@@ -11,8 +11,28 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   public appPages = [
- 
+    {
+      title: 'Profile',
+      url: '/profiles',
+      icon: 'person'
+    },
+    {
+      title: 'Setting',
+      url: '/settings',
+      icon: 'Settings'
+    },
+    {
+      title: 'Bookmark',
+      url: '/bookmarks',
+      icon: 'bookmarks'
+    },
+    {
+      title: 'About Us',
+      url: '/about',
+      icon: 'people'
+    }
   ];
+
 
   constructor(
     private platform: Platform,
