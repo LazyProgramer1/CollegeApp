@@ -62,15 +62,18 @@ const routes: Routes = [
     loadChildren: () => import('./bookmarks/bookmarks.module').then( m => m.BookmarksPageModule)
   },
 
- 
+
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
-
-
   {
     path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+
+  {
+    path: 'login',
     loadChildren: () => import('./login/login.module').then(m =>m.LoginPageModule)
   },
   
