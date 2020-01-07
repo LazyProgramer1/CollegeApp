@@ -48,6 +48,30 @@ const routes: Routes = [
   },
   {
 
+
+  {
+    path:'B.Sc.(Hons.) in CS&SE',
+    loadChildren: () => import('./collegedetail/courses/csse/csse.module').then(m=>m.CSSEPageModule)
+  },
+  {
+    path:'B.Sc (Hons) CS&SE – Topup',
+    loadChildren: () => import('./collegedetail/courses/csse-top/csse-top.module').then(m=>m.CSSETopPageModule)
+  },
+  {
+    path: 'BA (Hons) Business Administration',
+    loadChildren: () => import('./collegedetail/courses/bba/bba.module').then(m=>m.BBAPageModule)
+  },
+  {
+    path: 'BA (Hons) Business Administration (Topup) ',
+    loadChildren: () => import('./collegedetail/courses/bba-topup/bba-topup.module').then(m=>m.BBATopupPageModule)
+  },
+  {
+    path: 'A-level ',
+    loadChildren: () => import('./collegedetail/courses/a-level/a-level.module').then(m=>m.ALevelPageModule)
+  },
+
+  {
+
     path: 'settings',
     loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
   },
@@ -72,6 +96,7 @@ const routes: Routes = [
 
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
+
 
 
 
