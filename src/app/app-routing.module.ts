@@ -13,10 +13,6 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'homepage',
-    loadChildren: () => import('./homepage/homepage.module').then( m => m.HomepagePageModule)
-  },
-  {
     path: 'collegedetail',
     loadChildren: () => import('./collegedetail/collegedetail.module').then(m => m.CollegedetailPageModule)
   },
@@ -25,6 +21,7 @@ const routes: Routes = [
     loadChildren: () => import('./collegedetail/about-college/about-college.module').then(m => m.AboutCollegePageModule)
   },
   {
+
     path: 'courses',
     loadChildren: () => import('./collegedetail/courses/courses.module').then(m=>m.CoursesPageModule)
   },
@@ -44,6 +41,7 @@ const routes: Routes = [
     path:'reviews',
     loadChildren: () => import('./collegedetail/reviews/reviews.module').then(m=>m.ReviewsPageModule)
   },
+
   {
     path:'B.Sc.(Hons.) in CS&SE',
     loadChildren: () => import('./collegedetail/courses/csse/csse.module').then(m=>m.CSSEPageModule)
@@ -63,7 +61,35 @@ const routes: Routes = [
   {
     path: 'A-level ',
     loadChildren: () => import('./collegedetail/courses/a-level/a-level.module').then(m=>m.ALevelPageModule)
+  },
+
+  {
+
+    path: 'setting',
+    loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
+  },
+  {
+    path: 'aboutus',
+    loadChildren: () => import('./aboutus/aboutus.module').then( m => m.AboutusPageModule)
+  },
+  {
+    path: 'bookmarks',
+    loadChildren: () => import('./bookmarks/bookmarks.module').then( m => m.BookmarksPageModule)
+  },
+
+ 
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+
+
+  {
+    path: 'register',
+    loadChildren: () => import('./login/login.module').then(m =>m.LoginPageModule)
   }
+
+
 
 ];
 
@@ -74,3 +100,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
+
+
+
+ 
