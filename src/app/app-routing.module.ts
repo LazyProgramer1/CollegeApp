@@ -6,7 +6,7 @@ import { CollegedetailPageModule } from './collegedetail/collegedetail.module';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
