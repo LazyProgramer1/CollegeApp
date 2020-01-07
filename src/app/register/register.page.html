@@ -7,17 +7,20 @@
 <ion-content class="ion-padding ion-text-center">
   <ion-list>
     <ion-item>
-      <ion-input placeholder="Enter name"></ion-input>
+      <ion-input name= "name" type="text" placeholder="Enter name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Email address"></ion-input>
+      <ion-input name="email" type="email" placeholder="Email address"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Phone number"></ion-input>
+      <ion-input name="phone" type="number" placeholder="Phone number"></ion-input>
     </ion-item>
   </ion-list>
 
-  <ion-button class="register" routerLink="/login">Register</ion-button><br><br>
-  <ion-button class="Facebook">Sign up using Facebook</ion-button><br><br>
-  <ion-button class="Google">Sign up using Google</ion-button>
+  <ion-button style="width: 100%;" class="register" routerLink="/login">Register</ion-button><br>
+  <div text-center style="width:100%; font-size: 30px;">
+    Or
+  </div>
+  <ion-button style="width: 100%;" class="Facebook">Sign up using Facebook</ion-button><br><br>
+  <ion-button style="width: 100%;" class="Google">Sign up using Google</ion-button>
 </ion-content>

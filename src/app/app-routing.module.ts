@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CollegedetailPageModule } from './collegedetail/collegedetail.module';
@@ -5,12 +6,16 @@ import { CollegedetailPageModule } from './collegedetail/collegedetail.module';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'profiles',
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule)
   },
   {
     path: 'collegedetail',
@@ -41,6 +46,8 @@ const routes: Routes = [
     path:'reviews',
     loadChildren: () => import('./collegedetail/reviews/reviews.module').then(m=>m.ReviewsPageModule)
   },
+  {
+
 
   {
     path:'B.Sc.(Hons.) in CS&SE',
@@ -65,29 +72,32 @@ const routes: Routes = [
 
   {
 
-    path: 'setting',
+    path: 'settings',
     loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
   },
   {
-    path: 'aboutus',
+
+    path: 'about',
     loadChildren: () => import('./aboutus/aboutus.module').then( m => m.AboutusPageModule)
   },
+
   {
     path: 'bookmarks',
     loadChildren: () => import('./bookmarks/bookmarks.module').then( m => m.BookmarksPageModule)
   },
 
- 
+
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
-
-
   {
     path: 'register',
-    loadChildren: () => import('./login/login.module').then(m =>m.LoginPageModule)
-  }
+
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+
+
 
 
 
@@ -101,7 +111,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule {}
 
-
-
-
- 
