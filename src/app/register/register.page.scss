@@ -1,43 +1,23 @@
-page-register {
-    ion-content {
-        text-align: center;
-    }
+#logo{
+    // padding-top: 50%;
+    height: 100%;
+    background-color: #514714;
+   
 
-button{
-    -webkit-box-shadow : 0 10px 30px 0 rgba(96,186,233,0.4);
-    box-shadow: 0 10px 30px rgba(96,186,233,0.4);
-    margin : 100px;
 }
+#log{
+    margin-bottom: 25%;
 
-.register{
-    margin-top: 100px;
-    text-align: center;
-    border:none;
-    padding: 15px 80px;
-    font-size: 130px;
-    width: 85%;
-    height: 35px;
-    color: #000;
 }
-
-.facebook{
-    margin-top: 100px;
-    text-align: center;
-    border:none;
-    padding: 15px 80px;
-    font-size: 130px;
-    width: 85%;
-    height: 35px;
-    color: #000;
+.font
+{
+    font-size: 40px;
+    font-family: cursive;
+    padding-left: 20%;
 }
-.google{
-    margin-top: 100px;
-    text-align: center;
-    border:none;
-    padding: 15px 80px;
-    font-size: 130px;
-    width: 85%;
-    height: 35px;
-    color: #000;
-}
+#label
+{
+    font-size: 20px;
+    font-family: cursive;
+    padding-left: 50%;
 }

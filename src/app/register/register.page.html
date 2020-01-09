@@ -1,26 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Register</ion-title>
-  </ion-toolbar>
+  
+    <ion-buttons slot="start"  style="background-color: #514714;">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+  
 </ion-header>
-
-<ion-content class="ion-padding ion-text-center">
-  <ion-list>
-    <ion-item>
-      <ion-input name= "name" type="text" placeholder="Enter name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input name="email" type="email" placeholder="Email address"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input name="phone" type="number" placeholder="Phone number"></ion-input>
-    </ion-item>
-  </ion-list>
-
-  <ion-button style="width: 100%;" class="register" routerLink="/login">Register</ion-button><br>
-  <div text-center style="width:100%; font-size: 30px;">
-    Or
+  <ion-list id="logo">
+   
+    <div style="margin-top: 25%; padding-left: 15%;">
+    <ion-label class="font">Register</ion-label><br><br>
   </div>
-  <ion-button style="width: 100%;" class="Facebook">Sign up using Facebook</ion-button><br><br>
-  <ion-button style="width: 100%;" class="Google">Sign up using Google</ion-button>
-</ion-content>
+   
+
+    <div style="margin-left: 9%;">
+    <u><h4><ion-input name= "name" type="text" placeholder="Enter name"></ion-input></h4></u>
+  </div>
+  <div style="margin-left: 9%;">
+    <u><h4><ion-input name="email" type="email" placeholder="Email address"></ion-input></h4></u>
+  </div>
+  <div style="margin-left: 9%;">
+    <u><h4><ion-input name="password" type="password" placeholder="Password"></ion-input></h4></u><br><br>
+  </div>
+    <ion-button style="width: 90%; padding-left: 9%; " routerLink="/login">Sign Up</ion-button><br>
+    <ion-label id="label">Or</ion-label><br>
+    <ion-button style="width: 90%;padding-left: 9%;" class="Facebook" routerLink="">Facebook</ion-button><br>
+    <ion-button style="width: 90%;padding-left: 9%;" class="Google">Google</ion-button>
+  </ion-list> 
+  
+
+
+
