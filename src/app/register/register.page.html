@@ -24,7 +24,13 @@
     <ion-button style="width: 90%; padding-left: 9%; " routerLink="/login">Sign Up</ion-button><br>
     <ion-label id="label">Or</ion-label><br>
     <ion-button style="width: 90%;padding-left: 9%;" class="Facebook" routerLink="">Facebook</ion-button><br>
-    <ion-button style="width: 90%;padding-left: 9%;" class="Google">Google</ion-button>
+    <div *ngIf="auth.user$" | async as user; else login>
+      {{user| json}}
+      <ng-template #Login>
+        <button class="buton" (click)="auth.googleSignin()">Login with GOogle</button>
+      </ng-template>
+    <ion-button style="width: 90%;padding-left: 9%;" class="Google" (click)="auth.signOut()">Google</ion-button>
+    </div>
   </ion-list> 
   
 
