@@ -4,7 +4,10 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {AuthService} from './services/auth.service';
-import { from } from 'rxjs';
+import { auth } from 'firebase/app';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -40,7 +43,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    public auth: AuthService,
+    public afAuth:AngularFireAuth,
+    private router:Router
 
   ) {
     this.initializeApp();
@@ -48,10 +52,20 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      this.afAuth.user.subscribe(user =>{
+        if(user){
+          this.router.navigate(["/home"]);
+        }
+        else{
+          this.router.navigate(["/login"]);
+        }
+      }, err =>{
+          this.router.navigate(["/login"]);
+
+      },()=>{
+        this.splashScreen.hide();
+      })
+      this.statusBar.styleDefault(); 
     });
   }
-
-  
 }

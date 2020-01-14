@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDvrOIu7wYFFqjyeGDZk-4rOrFBAEu5U3s",
+    authDomain: "collegefinder-34763.firebaseapp.com",
+    databaseURL: "https://collegefinder-34763.firebaseio.com",
+    projectId: "collegefinder-34763",
+    storageBucket: "collegefinder-34763.appspot.com",
+    messagingSenderId: "391817148498" //appId: "1:391817148498:web:3158ea62118c77ea23c78b", //measurementId: "G-F476PEWTYL"
+  }
 };
 
 /*
