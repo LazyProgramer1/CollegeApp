@@ -44,7 +44,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     public afAuth:AngularFireAuth,
-    private router:Router
+    private router:Router,
+    private authService:AuthService
 
   ) {
     this.initializeApp();
@@ -67,5 +68,13 @@ export class AppComponent {
       })
       this.statusBar.styleDefault(); 
     });
+  }
+  logout(){
+    this.authService.doLogout()
+    .then(res => {
+      this.router.navigate(["/login"]);
+    }, err => {
+      console.log(err);
+    })
   }
 }
