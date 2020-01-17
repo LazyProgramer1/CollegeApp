@@ -1,10 +1,12 @@
-<!-- <ion-header>
+<ion-header>
   
     <ion-buttons slot="start"  style="background-color: #514714;">
       <ion-back-button defaultHref="/login"></ion-back-button>
     </ion-buttons>
   
 </ion-header>
+
+
   <ion-list id="logo">
    
     <div style="margin-top: 25%; padding-left: 15%;">
@@ -12,27 +14,7 @@
   </div>
    
 
-    <div style="margin-left: 9%;">
-    <u><h4><ion-input name= "name" type="text" placeholder="Enter name"></ion-input></h4></u>
-  </div>
-  <div style="margin-left: 9%;">
-    <u><h4><ion-input name="email" type="email" placeholder="Email address"></ion-input></h4></u>
-  </div>
-  <div style="margin-left: 9%;">
-    <u><h4><ion-input name="password" type="password" placeholder="Password"></ion-input></h4></u><br><br>
-  </div>
-    <ion-button style="width: 90%; padding-left: 9%; " routerLink="/login">Sign Up</ion-button><br>
-    <ion-label id="label">Or</ion-label><br>
-    <ion-button style="width: 90%;padding-left: 9%;" class="Facebook" routerLink="">Facebook</ion-button><br>
-    
-    <ion-button style="width: 90%;padding-left: 9%;" class="Google" (click)="auth.googleSignin()">Google</ion-button>
-    </div>
-  </ion-list> 
-  
-
-
-
-
+<!--
  <div *ngIf="auth.user$ | async; then authenticated else guest">
  
 </div>
@@ -43,8 +25,6 @@
 </button>
 
 </ng-template>
-
-
  User logged in 
 <ng-template #authenticated>
 <div *ngIf="auth.user$ | async as user">
@@ -56,20 +36,16 @@
 </ng-template> -->
 
 
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Register</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content padding class="form-content">
   <form class="form" [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
 
-    <ion-item>
+   
+      <div style="margin-left: 9%;">
       <ion-label position="floating" color="primary">Email</ion-label>
-      <ion-input type="text" formControlName="email"></ion-input>
-    </ion-item>
-    <div class="validation-errors">
+      </div>
+      <ion-input style="margin-left: 9%;" type="text" formControlName="email"></ion-input>
+  
+    <div class="validation-errors" style="margin-left: 9%;">
       <ng-container *ngFor="let validation of validation_messages.email">
         <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
           {{ validation.message }}
@@ -77,11 +53,13 @@
       </ng-container>
     </div>
 
-    <ion-item>
+      <div style="margin-left: 9%;">
       <ion-label position="floating" color="primary">Password</ion-label>
-      <ion-input type="password" formControlName="password"></ion-input>
-    </ion-item>
-    <div class="validation-errors">
+      </div>
+
+      <ion-input style="margin-left: 9%;" type="password" formControlName="password"></ion-input>
+    
+    <div class="validation-errors" style="margin-left: 9%;">
       <ng-container *ngFor="let validation of validation_messages.password">
         <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
           {{ validation.message }}
@@ -89,11 +67,10 @@
       </ng-container>
     </div>
 
-    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Register</ion-button>
+    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid" style="width: 90%; padding-left: 9%; ">Register</ion-button>
     <label class="error-message">{{errorMessage}}</label>
     <label class="success-message">{{successMessage}}</label>
   </form>
-  <p class="go-to-login">Already have an account? <a (click)="goLoginPage()">Try to Log In.</a></p>
+  <p class="go-to-login" style="margin-left: 9%;">Already have an account? <a (click)="goLoginPage()">Try to Log In.</a></p>
 
-</ion-content>
 

@@ -7,6 +7,7 @@ import {AuthService} from './services/auth.service';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import{CATEGORIES} from '../app/standard'
 
 
 @Component({
@@ -15,6 +16,11 @@ import { Router } from '@angular/router';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+
+  categoryList: Array<any> = CATEGORIES;
+  selectedCategory = this.categoryList[0];
+
+
   public appPages = [
     {
       title: 'Profile',
@@ -76,5 +82,8 @@ export class AppComponent {
     }, err => {
       console.log(err);
     })
+  }
+  handleChange(){
+    /////////
   }
 }
