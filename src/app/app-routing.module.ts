@@ -48,8 +48,6 @@ const routes: Routes = [
   },
   {
 
-
-  {
     path:'B.Sc.(Hons.) in CS&SE',
     loadChildren: () => import('./collegedetail/courses/csse/csse.module').then(m=>m.CSSEPageModule)
   },
