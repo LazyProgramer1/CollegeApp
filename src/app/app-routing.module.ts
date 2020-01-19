@@ -47,9 +47,6 @@ const routes: Routes = [
     loadChildren: () => import('./collegedetail/reviews/reviews.module').then(m=>m.ReviewsPageModule)
   },
   {
-
-
-  {
     path:'B.Sc.(Hons.) in CS&SE',
     loadChildren: () => import('./collegedetail/courses/csse/csse.module').then(m=>m.CSSEPageModule)
   },
