@@ -8,11 +8,14 @@ import { SettingPageRoutingModule } from './setting-routing.module';
 
 import { SettingPage } from './setting.page';
 
+import { StarRatingModule } from 'ionic4-star-rating';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    StarRatingModule,
     SettingPageRoutingModule
   ],
   declarations: [SettingPage]

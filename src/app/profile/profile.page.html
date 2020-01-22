@@ -5,18 +5,99 @@
 </ion-header>
 
 <ion-content >
+  <ion-item>
+  <ion-label>Your profile information will be accessible to<br> schools and other educational organisations<br> that use the COllegeFinder. </ion-label>
+</ion-item>
+
  <ion-item id="con">
     <img class="ava" src="https://secure.gravatar.com/avatar/245ebfee46ba6868f48cfc5a2c88c39f">
     <ion-icon id = "icon" name="add-circle"></ion-icon>
   </ion-item>
-  <ion-item>
-    <ion-segment (ionChange)="segmentChanged($event)">
-      <ion-segment-button value="friends">
-        <ion-label>My Profile</ion-label>
+
+    
+    <ion-segment color="primary" [(ngModel)]="yudsegment">
+      <ion-segment-button value="today">
+          Personalization
       </ion-segment-button>
-      <ion-segment-button value="enemies">
-        <ion-label>Academics</ion-label>
+      <ion-segment-button value="month">
+          Academic
       </ion-segment-button>
     </ion-segment>
-  </ion-item>
+   
+    <div [ngSwitch]="yudsegment">
+      <ion-list *ngSwitchCase="'today'">
+       
+     <div>
+      <!-- <form [FormGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">  -->
+      <form > 
+       <ion-item>
+        <ion-label>First Name</ion-label>
+        <ion-input type="text"  [(ngModel)]="details.First_Name">    </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Last Name</ion-label>
+
+        <ion-input  type="text" [(ngModel)]="details.Last_Name"> </ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-label>huntervsskull123@gmail.com</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Enter your gender</ion-label>
+        <ion-select>
+          <ion-input  type="text" [(ngModel)]="details.Gender"> </ion-input>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Birthday</ion-label>
+        <ion-input type="text" [(ngModel)]="details.Birthday" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone number</ion-label>
+        <ion-input  type="text" [(ngModel)]="details.PhoneNumber"></ion-input>
+      </ion-item>
+    
+    
+        <ion-button  style="margin-left: 35%;" (click)="savefeedback()">Update my profile</ion-button>
+       </form> 
+     </div>
+  
+      </ion-list>
+    
+      <ion-list *ngSwitchCase="'month'">
+        <ion-item>
+          <ion-label>School*</ion-label>
+          <ion-input type="string"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Graduation from school*</ion-label>
+          <ion-input type="date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>GPA</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>highSchool</ion-label>
+          <ion-input type="string" placeholder="If you completed highSchool"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Graduation from highSchool</ion-label>
+          <ion-input type="date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Bachelors</ion-label>
+          <ion-input type="string" placeholder="If you completed bachelor"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Graduation from Bachelor</ion-label>
+          <ion-input type="date"></ion-input>
+        </ion-item>
+        <ion-button style="margin-left: 35%;">Save</ion-button>
+      </ion-list>
+      
+  
+    </div>
+
 </ion-content>

@@ -8,7 +8,9 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
- 
+
+
+<!-- 
 <ion-content>
   <div *ngFor="let cat of items" class="category-block">
  
@@ -37,4 +39,21 @@
     </ion-slides>
  
   </div>
-</ion-content>
+
+
+</ion-content> -->
+
+
+  <ion-content padding>
+    <ion-card *ngFor="let data of datas">
+      <ion-card-header>
+        <ion-img [src]="data.image"></ion-img>
+        <ion-card-title>{{data.Name}}</ion-card-title>
+        <ion-card-subtitle>{{data.Address}}</ion-card-subtitle>
+        <ion-card-subtitle>{{data.Contact}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{data.Description}}a
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
