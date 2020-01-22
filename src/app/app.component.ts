@@ -7,7 +7,8 @@ import {AuthService} from './services/auth.service';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import{CATEGORIES} from '../app/standard'
+
+import * as firebase from 'firebase/app';
 
 
 @Component({
@@ -17,8 +18,8 @@ import{CATEGORIES} from '../app/standard'
 })
 export class AppComponent {
 
-  categoryList: Array<any> = CATEGORIES;
-  selectedCategory = this.categoryList[0];
+ 
+ 
 
 
   public appPages = [
@@ -75,7 +76,7 @@ export class AppComponent {
       this.statusBar.styleDefault(); 
     });
   }
-  logout(){
+  logout1(){
     this.authService.doLogout()
     .then(res => {
       this.router.navigate(["/login"]);
@@ -83,7 +84,13 @@ export class AppComponent {
       console.log(err);
     })
   }
+
+  logout(){
+    this.router.navigate(["/login"]);
+  }
   handleChange(){
     /////////
   }
+
+ 
 }

@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import {ImagePicker} from "@ionic-native/image-picker/ngx";
+import { Facebook } from '@ionic-native/facebook/ngx';
+
 // const firebaseConfig = {
 //   apiKey: "AIzaSyDD-jVCgVZ1f_FeVxLOoym7i2b8hKJzStg",
 //   authDomain: "testproject-9dc39.firebaseapp.com",
@@ -47,6 +49,7 @@ import {ImagePicker} from "@ionic-native/image-picker/ngx";
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     ImagePicker,
     { provide: FirestoreSettingsToken, useValue: {} },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

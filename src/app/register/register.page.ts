@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 
 @Component({
   selector: 'app-register',
@@ -28,7 +30,9 @@ export class RegisterPage implements OnInit {
   constructor(
     private authService: AuthService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    public afAuth:AngularFireAuth,
+    private fb:Facebook
   ) { }
 
   ngOnInit() {
@@ -59,6 +63,23 @@ export class RegisterPage implements OnInit {
 
   goLoginPage(){
     this.router.navigate(["/login"]);
+  }
+
+  goSettingPage(){
+    this.router.navigate(["/settings"]);
+  }
+  login(){
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+
+  logoutt(){
+    this.afAuth.auth.signOut();
+  }
+ 
+
+  fblogin()
+  {
+    this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
   }
 
 }

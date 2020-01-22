@@ -6,6 +6,7 @@ import { RegisterPage } from './register.page';
 import { RouterModule, Routes } from '@angular/router';
 
 
+
 const routes: Routes = [
   {
     path: '',
@@ -18,6 +19,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+   
     ReactiveFormsModule,
     RouterModule.forChild(routes)
   ],

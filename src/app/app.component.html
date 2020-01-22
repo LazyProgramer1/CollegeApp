@@ -31,15 +31,15 @@
         </ion-list>
       <ion-item>
         <ion-icon name="school" slot="start"></ion-icon>
-          <ion-item style="width: 110%;">
+         
             <ion-label>Standard</ion-label>
-            <ion-select interface="popover" [(ngModel)]="selectedCategory" (ngModelChange)="handleChange()">
-              <ion-select-option *ngFor="let cat of categoryList" [value]="cat">{{cat.name}}</ion-select-option>
+          <ion-select>
+              <ion-select-option value="plus2">+2</ion-select-option>
+              <ion-select-option value="Bachelors">Bachelors</ion-select-option>
+              <ion-select-option value="Masters">Masters</ion-select-option>
             </ion-select>
-          </ion-item>
-        
     
-      </ion-item>
+            </ion-item>
       <ion-item>
         <ion-icon name="star-half" slot="start"></ion-icon>
         <ion-label>Rate Us</ion-label>
