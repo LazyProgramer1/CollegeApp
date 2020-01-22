@@ -33,10 +33,6 @@ import { Facebook } from '@ionic-native/facebook/ngx';
 
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-  
-=======
->>>>>>> 627251d77492c490c89411c0c0fd54ffa09b13ba
   ],
   entryComponents: [],
   imports: [

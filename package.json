@@ -34,7 +34,6 @@
     "cordova-plugin-telerik-imagepicker": "^2.3.3",
     "cordova-universal-links-plugin-fix": "1.2.1",
     "core-js": "^2.5.4",
-
     "mapbox-gl": "^1.6.1",
     "firebase": "^7.6.2",
     "ionic4-star-rating": "^1.1.1",
