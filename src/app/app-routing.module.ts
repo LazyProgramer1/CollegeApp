@@ -90,7 +90,23 @@ const routes: Routes = [
     path: 'register',
 
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },  {
+    path: 'bachelor',
+    loadChildren: () => import('./bachelor/bachelor.module').then( m => m.BachelorPageModule)
   },
+  {
+    path: 'master',
+    loadChildren: () => import('./master/master.module').then( m => m.MasterPageModule)
+  },
+  {
+    path: 'plustwocollege',
+    loadChildren: () => import('./plustwocollege/plustwocollege.module').then( m => m.PlustwocollegePageModule)
+  },
+  {
+    path: 'detail',
+    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
+  },
+
 
 
 

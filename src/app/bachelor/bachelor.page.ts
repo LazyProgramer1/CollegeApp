@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CollegelistService } from '../collegelist.service';
 import {
   AngularFirestore,
   AngularFirestoreCollection
@@ -7,14 +8,13 @@ import {
 import { Observable } from "rxjs";
 import { Storage } from '@ionic/storage';
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-bachelor',
+  templateUrl: './bachelor.page.html',
+  styleUrls: ['./bachelor.page.scss'],
 })
+export class BachelorPage implements OnInit {
 
-export class HomePage implements OnInit {
- 
-  datas: [];
+  datas: any;
  
   sliderConfig = {
     slidesPerView: 1.6,
@@ -25,25 +25,29 @@ export class HomePage implements OnInit {
  
   constructor(
     private router: Router, 
-    public db:AngularFirestore, private storage:Storage
+    private collegeService: CollegelistService,
+    public db:AngularFirestore,private storage:Storage
     ) { }
  
   ngOnInit() {
     this.getAllPosts().subscribe((data: any) => {
-      this.datas = data,this.storage.set('college', data);
+      this.datas = data;
       console.log(data);
     });
   }
  
+  openCollege() {
+    this.router.navigate(['colleges']);
+  }
   getAllPosts() {
     return this.db
-      .collection("allcollege")
+      .collection("bachelorcollege")
       //.doc("vaf3q5sDJmXxD1FeQZAY")
-      //.collection("BachelorCollege")
-      
+     // .collection("BachelorCollege")
 
       .valueChanges();
   }
+
   async openDetail(data) {
     await this.storage.set('college',data)
       

@@ -1,5 +1,6 @@
 import { CollegelistService } from './../collegelist.service';
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
  
 @Component({
   selector: 'app-colleges',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./colleges.page.scss'],
 })
 export class CollegesPage implements OnInit {
+ data:any;
  
+  constructor(private cartService: CollegelistService,private storage:Storage) { }
  
-  constructor(private cartService: CollegelistService) { }
- 
-  ngOnInit() {
-
-}}
+  ngOnInit() {}
+async getArticle(){
+  const result = await this.storage.get('currentArticle');
+  if(result != null){
+    this.data = result;
+  }
+}
+}
