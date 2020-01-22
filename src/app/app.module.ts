@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import {ImagePicker} from "@ionic-native/image-picker/ngx";
 import { Facebook } from '@ionic-native/facebook/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 // const firebaseConfig = {
@@ -46,7 +47,8 @@ import { Facebook } from '@ionic-native/facebook/ngx';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,

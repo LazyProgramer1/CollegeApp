@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>College Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="6">
+        <ion-card >
+          <ion-img src="{{data.image}}"></ion-img>
+          <ion-card-header>
+            <ion-card-title>{{data.Name}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12">
+                About Us: {{data.Description}}
+              </ion-col>
+              <ion-col size="12">
+              Address:{{data.Address}}
+              </ion-col>
+              <ion-col size="12">
+                Contact:{{data.Contact}}
+              </ion-col>
+              <ion-col size="12">
+                Courses:{{data.courses}}
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
