@@ -42,10 +42,7 @@ const routes: Routes = [
     path:'contacts',
     loadChildren: () => import('./collegedetail/contacts/contacts.module').then(m=>m.ContactsPageModule)
   },
-  {
-    path:'reviews',
-    loadChildren: () => import('./collegedetail/reviews/reviews.module').then(m=>m.ReviewsPageModule)
-  },
+  
   {
 
     path:'B.Sc.(Hons.) in CS&SE',

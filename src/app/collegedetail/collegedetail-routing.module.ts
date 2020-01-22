@@ -11,7 +11,8 @@ const routes: Routes = [
   {
     path: 'about-college',
     loadChildren: () => import('./about-college/about-college.module').then( m => m.AboutCollegePageModule)
-  },  {
+  },
+  {
     path: 'courses',
     loadChildren: () => import('./courses/courses.module').then( m => m.CoursesPageModule)
   },
@@ -27,10 +28,7 @@ const routes: Routes = [
     path: 'contacts',
     loadChildren: () => import('./contacts/contacts.module').then( m => m.ContactsPageModule)
   },
-  {
-    path: 'reviews',
-    loadChildren: () => import('./reviews/reviews.module').then( m => m.ReviewsPageModule)
-  },
+ 
 
   
 ];

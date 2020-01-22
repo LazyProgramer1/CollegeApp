@@ -65,9 +65,7 @@ export class RegisterPage implements OnInit {
     this.router.navigate(["/login"]);
   }
 
-  goSettingPage(){
-    this.router.navigate(["/settings"]);
-  }
+
   login(){
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
