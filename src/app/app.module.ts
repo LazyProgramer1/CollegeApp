@@ -18,6 +18,7 @@ import { AngularFireStorageModule } from "@angular/fire/storage";
 import {ImagePicker} from "@ionic-native/image-picker/ngx";
 import { Facebook } from '@ionic-native/facebook/ngx';
 
+
 // const firebaseConfig = {
 //   apiKey: "AIzaSyDD-jVCgVZ1f_FeVxLOoym7i2b8hKJzStg",
 //   authDomain: "testproject-9dc39.firebaseapp.com",
@@ -53,7 +54,8 @@ import { Facebook } from '@ionic-native/facebook/ngx';
     Facebook,
     ImagePicker,
     { provide: FirestoreSettingsToken, useValue: {} },
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    
   ],
   bootstrap: [AppComponent,
     

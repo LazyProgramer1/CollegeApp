@@ -1,66 +1,44 @@
 <ion-header>
   <ion-toolbar>
+    <ion-icon name="setting" slot="start"></ion-icon>
     <ion-title >Setting</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <!-- <ion-content fullscreen>
-    <ion-list>
-      <ion-radio-group>
-        <ion-list-header>
-          <ion-label>Fruit</ion-label>
-        </ion-list-header>
-        <ion-item>
-          <ion-label>Apple</ion-label>
-          <ion-radio slot="start" color="success" value="apple"></ion-radio>
-        </ion-item>
-
-        <ion-item>
-          <ion-label>Grape</ion-label>
-          <ion-radio slot="start" color="tertiary" value="grape" checked></ion-radio>
-        </ion-item>
-
-        <ion-item>
-          <ion-label>Cherry</ion-label>
-          <ion-radio slot="start" color="danger" value="cherry"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
-
-      
-    </ion-list>
-  </ion-content> -->
   <ion-item>
-  <ion-label>Options</ion-label>
+    <ion-icon name="ribbon" slot="start"></ion-icon>
+  <ion-label>Invite your friends and earn rewards</ion-label>
   </ion-item>
   <ion-item>
-    <ion-label>Allow Push Notification</ion-label>
-    <ion-toggle slot="end" checked></ion-toggle>
+    <ion-label><b>Allow Push Notification</b></ion-label>
+    <ion-toggle slot="end" disabled checked ></ion-toggle>
   </ion-item>
-  <ion-item routerLink="/home">
-    <ion-label>Change Password</ion-label>
+  <ion-item>
+    <ion-icon name="star-half" slot="start"></ion-icon>
+    <ion-label >Rate Us</ion-label>
+  </ion-item>
+  <ion-item routerLink="/about">
+    <ion-icon name="people" slot="start"></ion-icon>
+    <ion-label>Aboutus</ion-label>
+    
+  </ion-item>
+  <ion-item routerLink="/aboutus">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <ion-label>Terms of use</ion-label>
+    
+  </ion-item>
+  <ion-item routerLink="/aboutus">
+    <ion-icon name="information-circle"></ion-icon>
+    <ion-label>Privacy policy</ion-label>
     
   </ion-item>
   
  
-  <ion-item (click)="buttonClick()">
+  <ion-item (click)="logout1()">
+    <ion-icon name="exit" slot="start"></ion-icon>
     <ion-label>
-      Button Item
+     SignOut
     </ion-label>
   </ion-item>
-
-  <!-- <ionic4-star-rating #rating
-        activeIcon = "ios-star"
-        defaultIcon = "ios-star-outline"
-        activeColor = "#488aff" 
-        defaultColor = "#f4f4f4"
-        readonly="false"
-        rating="3"
-        fontSize = "32px"
-        (ratingChanged)="logRatingChange($event)">
-    </ionic4-star-rating> -->
-
-
-
 
 </ion-content>

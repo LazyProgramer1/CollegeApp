@@ -76,10 +76,7 @@ const routes: Routes = [
     loadChildren: () => import('./aboutus/aboutus.module').then( m => m.AboutusPageModule)
   },
 
-  {
-    path: 'bookmarks',
-    loadChildren: () => import('./bookmarks/bookmarks.module').then( m => m.BookmarksPageModule)
-  },
+
 
 
   {

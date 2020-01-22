@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
+import { MenuController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -32,9 +33,11 @@ export class RegisterPage implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     public afAuth:AngularFireAuth,
-    private fb:Facebook
+    private fb:Facebook,
+    public menuCtrl:MenuController,
+    public navctrl:NavController
   ) { }
-
+  ionViewWillEnter(){this.menuCtrl.enable(false,"myMenu");}
   ngOnInit() {
     this.validations_form = this.formBuilder.group({
       email: new FormControl('', Validators.compose([

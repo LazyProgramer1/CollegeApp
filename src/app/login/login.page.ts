@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { MenuController, NavController } from '@ionic/angular';
+
 
 
 @Component({
@@ -26,7 +28,10 @@ export class LoginPage implements OnInit {
 
   constructor(   private authService: AuthService,
     private formBuilder: FormBuilder,
-    private router: Router) { }
+    private router: Router,
+    public menuCtrl:MenuController,
+    public navctrl:NavController) { }
+    ionViewWillEnter(){this.menuCtrl.enable(false,"myMenu");}
 
   ngOnInit() {
     this.validations_form = this.formBuilder.group({

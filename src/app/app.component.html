@@ -20,7 +20,7 @@
     
 
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+          <ion-menu-toggle id="myMenu" auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
@@ -28,26 +28,22 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
-      <ion-item>
-        <ion-icon name="school" slot="start"></ion-icon>
-         
+          <ion-menu-toggle id="myMenu" auto-hide="false" >
+            <ion-item>
+            <ion-icon name="school" slot="start"></ion-icon>
             <ion-label>Standard</ion-label>
           <ion-select>
               <ion-select-option value="plus2">+2</ion-select-option>
               <ion-select-option value="Bachelors">Bachelors</ion-select-option>
               <ion-select-option value="Masters">Masters</ion-select-option>
             </ion-select>
-    
             </ion-item>
-      <ion-item>
-        <ion-icon name="star-half" slot="start"></ion-icon>
-        <ion-label>Rate Us</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="exit" slot="start"></ion-icon>
-        <ion-label (click)="logout()">Log out</ion-label>
-      </ion-item>
+          </ion-menu-toggle>
+    
+          
+        </ion-list>
+    
+     
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

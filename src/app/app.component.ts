@@ -8,6 +8,7 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
+
 import * as firebase from 'firebase/app';
 
 
@@ -32,17 +33,9 @@ export class AppComponent {
       title: 'Setting',
       url: '/settings',
       icon: 'Settings'
-    },
-    {
-      title: 'Bookmark',
-      url: '/bookmarks',
-      icon: 'bookmarks'
-    },
-    {
-      title: 'About Us',
-      url: '/about',
-      icon: 'people'
     }
+  
+
   ];
 
 
@@ -52,7 +45,8 @@ export class AppComponent {
     private statusBar: StatusBar,
     public afAuth:AngularFireAuth,
     private router:Router,
-    private authService:AuthService
+    private authService:AuthService,
+
 
   ) {
     this.initializeApp();
@@ -74,7 +68,13 @@ export class AppComponent {
         this.splashScreen.hide();
       })
       this.statusBar.styleDefault(); 
+    
+
+   
+    
     });
+ 
+ 
   }
   logout1(){
     this.authService.doLogout()
@@ -91,6 +91,13 @@ export class AppComponent {
   handleChange(){
     /////////
   }
+
+  // PromptUserForAppRating(){
+  //   this.appRate.preferences.storeAppURL={
+  //     android:"market://details?id=CollegeApP"
+  //   }
+  //   this.appRate.promptForRating(true);
+  // }
 
  
 }
