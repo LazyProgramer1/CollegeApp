@@ -34,13 +34,11 @@
     "cordova-plugin-telerik-imagepicker": "^2.3.3",
     "cordova-universal-links-plugin-fix": "1.2.1",
     "core-js": "^2.5.4",
-<<<<<<< HEAD
+
     "mapbox-gl": "^1.6.1",
-=======
     "firebase": "^7.6.2",
     "ionic4-star-rating": "^1.1.1",
     "plugin": "0.3.3",
->>>>>>> 627251d77492c490c89411c0c0fd54ffa09b13ba
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
