@@ -104,7 +104,15 @@ const routes: Routes = [
   {
     path: 'detail',
     loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
+  },  {
+    path: 'termsof-condition',
+    loadChildren: () => import('./termsof-condition/termsof-condition.module').then( m => m.TermsofConditionPageModule)
   },
+  {
+    path: 'privacy',
+    loadChildren: () => import('./privacy/privacy.module').then( m => m.PrivacyPageModule)
+  },
+
 
 ];
 

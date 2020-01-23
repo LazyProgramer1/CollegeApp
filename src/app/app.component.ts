@@ -91,6 +91,18 @@ export class AppComponent {
   handleChange(){
     /////////
   }
+  bachelor()
+  {
+    this.router.navigateByUrl('/bachelor');
+  }
+  master()
+  {
+    this.router.navigateByUrl('/master');
+  }
+  plus2()
+  {
+    this.router.navigateByUrl('/plustwocollege');
+  }
 
   // PromptUserForAppRating(){
   //   this.appRate.preferences.storeAppURL={
