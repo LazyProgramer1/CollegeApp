@@ -31,10 +31,6 @@ const routes: Routes = [
     loadChildren: () => import('./collegedetail/courses/courses.module').then(m=>m.CoursesPageModule)
   },
   {
-    path:'college-galary',
-    loadChildren: () => import('./collegedetail/college-galary/college-galary.module').then(m=>m.CollegeGalaryPageModule)
-  },
-  {
     path:'facilities',
     loadChildren: () => import('./collegedetail/facilities/facilities.module').then(m=>m.FacilitiesPageModule)
   },
@@ -104,7 +100,8 @@ const routes: Routes = [
   {
     path: 'detail',
     loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
-  },  {
+  },
+  {
     path: 'termsof-condition',
     loadChildren: () => import('./termsof-condition/termsof-condition.module').then( m => m.TermsofConditionPageModule)
   },
