@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
 
-  mapboxkey:'pk.eyJ1IjoiZGlsaXB0NyIsImEiOiJjazVpemVveXgwazBtM2ttdHUyanYxdHBzIn0._J2OFQshw_l3GdO9eUnfrg',
+  mapboxkey:'pk.eyJ1IjoiZGlsaXB0NyIsImEiOiJjazVpemVveXgwazBtM2ttdHUyanYxdHBzIn0._J2OFQshw_l3GdO9eUnfrg',       //mapbox key to integrated mapboxapi with app 
 
   firebase: {
     apiKey: "AIzaSyDvrOIu7wYFFqjyeGDZk-4rOrFBAEu5U3s",
     authDomain: "collegefinder-34763.firebaseapp.com",
-    databaseURL: "https://collegefinder-34763.firebaseio.com",
+    databaseURL: "https://collegefinder-34763.firebaseio.com",      //firebase configuration to access firebase connection with our app
     projectId: "collegefinder-34763",
     storageBucket: "collegefinder-34763.appspot.com",
     messagingSenderId: "391817148498" //appId: "1:391817148498:web:3158ea62118c77ea23c78b", //measurementId: "G-F476PEWTYL"
