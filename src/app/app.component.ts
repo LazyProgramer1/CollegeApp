@@ -19,10 +19,6 @@ import * as firebase from 'firebase/app';
 })
 export class AppComponent {
 
- 
- 
-
-
   public appPages = [
     {
       title: 'Profile',
